@@ -1,0 +1,16 @@
+{
+    "name": "NAGP To-do list",
+    "short_name": "NAGP",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#FFE9D2",
+    "theme_color": "FFE1C4",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/img/bg.jpg",
+            "type": "image/png",
+            "sizes": "72x72" 
+        }
+    ]
+}
