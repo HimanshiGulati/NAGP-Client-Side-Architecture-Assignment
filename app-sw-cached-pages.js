@@ -1,4 +1,4 @@
-const cacheName = 'v1';
+const cacheName = 'v4';
 
 const cacheAssets = [
     'index.html',
@@ -6,7 +6,7 @@ const cacheAssets = [
     '/css/font-awesome.css',
     'app.js',
     '/components/main.component.js',
-    '/components/add-to-do.component.js',
+    '/components/add-to-do-form.component.js',
     '/components/list.component.js'
 ]
 

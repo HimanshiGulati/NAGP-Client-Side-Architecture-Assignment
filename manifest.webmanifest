@@ -2,16 +2,14 @@
     "background_color": "#FFE9D2",
     "description": "Client side architecture assignment",
     "display": "fullscreen",
-    "orientation": "portrait",
-    "theme_color": "#ffffff",    
-    "name": "todo-nagp-app",
-    "short_name": "Himanshi_3147262",
-    "start_url": "/index.html",
     "icons": [
       {
         "src": "img/launcher.png",
         "sizes": "192x192",
         "type": "image/png"
       }
-    ]
+    ],
+    "name": "todo-nagp-app",
+    "short_name": "Himanshi_3147262",
+    "start_url": "/index.html"
   }

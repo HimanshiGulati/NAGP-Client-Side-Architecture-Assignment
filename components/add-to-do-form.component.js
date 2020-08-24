@@ -10,7 +10,7 @@ template.innerHTML = `
 </form>
 `;
 
-class AddToDo extends HTMLElement {
+class AddToDoForm extends HTMLElement {
 
     constructor() {
         super();
@@ -40,4 +40,4 @@ class AddToDo extends HTMLElement {
     }
 }
 
-window.customElements.define('add-to-do-component', AddToDo);
+window.customElements.define('add-to-do-form-component', AddToDoForm);

@@ -1,4 +1,4 @@
-import './add-to-do.component.js';
+import './add-to-do-form.component.js';
 import './list.component.js';
 
 //Main component
@@ -6,7 +6,7 @@ const template = document.createElement('template');
 template.innerHTML = `
 <main class="container">
   <list-component ref="list"></list-component>
-  <add-to-do-component></add-to-do-component>
+  <add-to-do-form-component></add-to-do-form-component>
 </main>
 `;
 
@@ -22,7 +22,7 @@ class Main extends HTMLElement {
     
   connectedCallback() {
     this.refs = {
-      form: this._shadowRoot.querySelector('add-to-do-component'),
+      form: this._shadowRoot.querySelector('add-to-do-form-component'),
       list: this._shadowRoot.querySelector('list-component'),
     }
     this.refs.form.props = {
