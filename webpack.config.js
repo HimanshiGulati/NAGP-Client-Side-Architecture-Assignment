@@ -30,13 +30,12 @@ module.exports = {
           ],
         },
         {
-          test: /\.scss$/,
-          use: [
-            'css-loader',
-            'postcss-loader',
-            'sass-loader',
-          ],
-        },
+            test: /\.css$/,
+            use: [
+              'style-loader',
+              'css-loader'
+            ]
+          },
         {
           test: /\.(png|jp(e*)g|svg)$/,
           use: [{

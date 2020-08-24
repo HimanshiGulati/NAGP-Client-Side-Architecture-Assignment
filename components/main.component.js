@@ -22,8 +22,8 @@ class Main extends HTMLElement {
     
   connectedCallback() {
     this.refs = {
-      form: this._shadowRoot.querySelector('add-todo'),
-      list: this._shadowRoot.querySelector('todo-list'),
+      form: this._shadowRoot.querySelector('add-to-do-component'),
+      list: this._shadowRoot.querySelector('list-component'),
     }
     this.refs.form.props = {
       onSubmit: this.addTask.bind(this),
