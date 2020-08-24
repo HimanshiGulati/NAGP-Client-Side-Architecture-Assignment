@@ -1,14 +1,14 @@
 import MainComponent from './components/main.component.js';
 
-if('serviceWorker' in  navigator){
+if ('serviceWorker' in navigator) {
 
-    window.addEventListener('load', () =>{
+  window.addEventListener('load', () => {
 
-        navigator.serviceWorker
-        .register('../app-sw-cached-pages.js')
-        .then(reg => console.log('Service Worker Registered'))
-        .catch(err => console.log(`Service Worker Error: ${err}`));
-    });
+    navigator.serviceWorker
+      .register('./app-sw-cached-pages.js')
+      .then(reg => console.log('Service Worker Registered'))
+      .catch(err => console.log(`Service Worker Error: ${err}`));
+  });
 }
 
 
@@ -18,21 +18,21 @@ const dateElement = document.getElementById("date");
 
 
 //Show today Date
-const options = {weekday: "long", month:"short", day:"numeric"}
+const options = { weekday: "long", month: "short", day: "numeric" }
 const today = new Date();
-dateElement.innerHTML = today.toLocaleDateString("en-US",options);
+dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 
-clear.addEventListener("click",function(event){
-    localStorage.clear();
-    location.reload();
+clear.addEventListener("click", function (event) {
+  localStorage.clear();
+  location.reload();
 
 });
 
 // Code to handle install prompt on desktop
 
 let deferredPrompt;
-const addBtn = document.querySelector('.add-button');
+const addBtn = document.querySelector('.add-to-screen-button');
 addBtn.style.display = 'none';
 
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -50,13 +50,13 @@ window.addEventListener('beforeinstallprompt', (e) => {
     deferredPrompt.prompt();
     // Wait for the user to respond to the prompt
     deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
-        } else {
-          console.log('User dismissed the A2HS prompt');
-        }
-        deferredPrompt = null;
-      });
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
+    });
   });
 });
 

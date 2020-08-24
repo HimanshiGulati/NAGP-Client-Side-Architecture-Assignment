@@ -1,16 +1,17 @@
 {
-    "name": "NAGP To-do list",
-    "short_name": "NAGP",
-    "start_url": "/index.html",
-    "display": "standalone",
     "background_color": "#FFE9D2",
-    "theme_color": "FFE1C4",
-    "orientation": "portrait-primary",
+    "description": "Client side architecture assignment",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "theme_color": "#ffffff",    
+    "name": "todo-nagp-app",
+    "short_name": "Himanshi_3147262",
+    "start_url": "/index.html",
     "icons": [
-        {
-            "src": "img/launcher.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        }
+      {
+        "src": "img/launcher.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
     ]
-}
+  }

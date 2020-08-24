@@ -1,4 +1,4 @@
-const cacheName = 'v2';
+const cacheName = 'v1';
 
 const cacheAssets = [
     'index.html',
@@ -47,9 +47,17 @@ self.addEventListener('activate', e => {
 });
 
 // call fetch event
-self.addEventListener('fetch', e => {
-    console.log('Service Worker : Fetching');
+// self.addEventListener('fetch', e => {
+//     console.log('Service Worker : Fetching');
 
-    e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+//     e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
 
-});
+// });
+
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+      fetch(event.request).catch(function() {
+        return caches.match(event.request);
+      })
+    );
+  });
