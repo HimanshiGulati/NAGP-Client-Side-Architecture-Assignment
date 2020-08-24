@@ -3,7 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const uglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 
-const libraryName = 'nagp-todo-assignment'; 
+const libraryName = 'todo-nagp-assignment'; 
 const outputFile = `${libraryName}.min.js`;
 
 module.exports = {
@@ -30,12 +30,13 @@ module.exports = {
           ],
         },
         {
-            test: /\.css$/,
-            use: [
-              'style-loader',
-              'css-loader'
-            ]
-          },
+          test: /\.scss$/,
+          use: [
+            'css-loader',
+            'postcss-loader',
+            'sass-loader',
+          ],
+        },
         {
           test: /\.(png|jp(e*)g|svg)$/,
           use: [{
